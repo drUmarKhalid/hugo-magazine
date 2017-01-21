@@ -1,22 +1,22 @@
 <div class="main-magazine">
   <div class="container">
     <div class="row">
-      <div class="col-lg-9">
+      <div class="col">
         <h3>Music</h3>
         <div class="row">
-          <div class="col-lg-6 top-story">
+          <div class="col top-story">
             {{ range first 1 (where .Site.Pages "Section" "music") }}
               {{ .Render "featured" }}
             {{ end }}
           </div>
-          <div class="col-lg-6 old-top-story">
+          <div class="col old-top-story">
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col">
                 {{ range first 2 (after 1 (where .Site.Pages "Section" "music")) }}
                   {{ .Render "featured" }}
                 {{ end }}
               </div>
-              <div class="col-xs-6">
+              <div class="col">
                 {{ range first 2 (after 3 (where .Site.Pages "Section" "music")) }}
                   {{ .Render "featured" }}
                 {{ end }}
@@ -26,19 +26,19 @@
         </div>
         <h3>Theater</h3>
         <div class="row">
-          <div class="col-lg-6 top-story">
+          <div class="col top-story">
             {{ range first 1 (where .Site.Pages "Section" "theater") }}
               {{ .Render "featured" }}
             {{ end }}
           </div>
-          <div class="col-lg-6 old-top-story">
+          <div class="col old-top-story">
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col">
                 {{ range first 2 (after 1 (where .Site.Pages "Section" "theater")) }}
                   {{ .Render "featured" }}
                 {{ end }}
               </div>
-              <div class="col-xs-6">
+              <div class="col">
                 {{ range first 2 (after 3 (where .Site.Pages "Section" "theater")) }}
                   {{ .Render "featured" }}
                 {{ end }}
