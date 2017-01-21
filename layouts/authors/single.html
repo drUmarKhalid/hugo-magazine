@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body>
+    {{ partial "topbar" . }}
+    {{ partial "header" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+          {{ if .Content }}
+          <article>
+            <h2>About</h2>
+            {{ .Content }}
+          </article>
+          {{ end }}
+          <section>
+            <!-- <h2 class="posts">Posts</h2> -->
+            {{ range where .Site.Pages "Params.author" .Title }}
+              {{ .Render "summary" }}
+            {{ end }}
+          </section>
+        </div>
+      </div class="row">
+    </div>
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<div id="topbar" class="navbar-dark bg-inverse">
+  <div class="container">
+    <nav class="navbar navbar-full">
+      <ul class="nav navbar-nav">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.topbar }}
+
+        <li class="nav-item">
+          <a href="{{.URL}}" class="nav-link{{if or ($currentNode.IsMenuCurrent "topbar" .) ($currentNode.HasMenuCurrent "topbar" .) }} active{{end}}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        {{ end }}
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 4rem;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+#topbar.bg-inverse {
+  background-color: #111 !important;
+  font-size: 0.75rem;
+}
+#topbar.bg-inverse .navbar {
+  padding: 0.25rem 0;
+}
+@media screen and (min-width: 768px) {
+  #main-head {
+    padding-top: 2rem;
+  }
+}
+#main-head .brand-logo {
+  font-size: 4rem;
+}
+.main-nav {
+  border: 1px solid #eee;
+  border-left: 0;
+  border-right: 0;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+  position: relative;
+}
+.main-nav .nav-item {
+  border-left: 1px solid #f1f1f1;
+  padding-left: 1rem;
+}
+.main-nav .nav-item:last-child {
+  border-right: 1px solid #f1f1f1;
+  padding-right: 1rem;
+}
+.main-nav .form-control,
+.main-nav .btn {
+  border-radius: 0;
+}
+.main-nav .brand-logo {
+  font-size: 1.5rem !important;
+}
+.navbar-fixed-top {
+  background-color: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+}
+.menu-background {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 1rem;
+}
+.main-featured {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  padding: 2rem 0;
+}
+.main-featured .figure {
+  margin: 0;
+  position: relative;
+}
+.main-featured .figure .figure-caption {
+  position: absolute;
+  bottom: 0;
+}
+.main-featured .top-story .figure-caption {
+  padding: 1rem;
+}
+.main-featured .old-top-story .col-xs-6 h4 {
+  font-size: 1rem;
+  margin-top: inherit;
+}
+.main-featured .old-top-story .col-xs-6:first-child {
+  padding-right: 2px;
+}
+.main-featured .old-top-story .col-xs-6:last-child {
+  padding-left: 2px;
+}
+.main-featured .old-top-story .col-xs-6 .figure-caption {
+  padding: 1rem 0.5rem;
+}
+.main-magazine {
+  padding: 2rem 0;
+}
+.main-magazine .figure {
+  margin: 0;
+  position: relative;
+}
+.main-magazine .figure .figure-caption {
+  position: absolute;
+  bottom: 0;
+}
+.main-magazine .top-story .figure-caption {
+  padding: 1rem;
+}
+.main-magazine .old-top-story .col-xs-6 h4 {
+  font-size: 1rem;
+  margin-top: inherit;
+}
+.main-magazine .old-top-story .col-xs-6:first-child {
+  padding-right: 2px;
+}
+.main-magazine .old-top-story .col-xs-6:last-child {
+  padding-left: 2px;
+}
+.main-magazine .old-top-story .col-xs-6 .figure-caption {
+  padding: 1rem 0.5rem;
+}

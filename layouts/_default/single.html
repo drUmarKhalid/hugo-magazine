@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body>
+    {{ partial "topbar" . }}
+    {{ partial "header" . }}
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+            <time class="post-date">{{ .Date.Format "Mon Jan 2, 2006" }}</time> 
+            {{ if .Params.author }}
+              by <a href="/authors/{{ .Params.author | urlize }}/">{{ .Params.author }}</a>
+            {{ end }}
+            <article>
+              {{ .Content }}
+            </article>
+          </div>
+        </div>
+        <aside class="meta col-xs-12">
+          <ul id="tags">
+            {{ range .Params.tags }}
+              <li><a href="/tags/{{ . | urlize }}/">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </aside>
+      </div>
+
+    {{ partial "footer" . }}
+    {{ partial "scripts" . }}
+  </body>
+</html>

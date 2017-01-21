@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head" . }}
+  <body>
+    {{ partial "topbar" . }}
+    {{ partial "header" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="title"><a href="">{{ .Title }}</a></h1>
+          {{ range .Data.Pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    {{ partial "footer" . }}
+    {{partial "scripts" . }}
+  </body>
+</html>

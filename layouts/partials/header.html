@@ -1,0 +1,67 @@
+<header id="main-head" class="main-head">
+  <div class="container hidden-md-down">
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="brand-logo"><a href="/">{{ .Site.Title }}</a></h1>
+      </div>
+      <div class="col-md-8">
+        <figure class="figure">
+          <img src="https://placehold.it/728x90" class="figure-img img-fluid">
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav">
+    <div class="container">
+      <div class="row menu">
+        <div class="col-md-12 navbar navbar-full navbar-light">
+          <nav>
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseMobile" aria-controls="collapseMobile" aria-expanded="false" aria-label="Toggle navigation">
+              &#9776;
+            </button>
+            <span class="brand-logo hidden-md-up"><a href="/">{{ .Site.Title }}</a></span>
+            <button class="btn btn-outline-secondary pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><i class="fa fa-search"></i></button>
+            <div class="collapse" id="collapseSearch">
+              <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-outline-secondary hidden-xs-up" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <div class="collapse navbar-toggleable-xs" id="collapseMobile">
+              <ul class="nav navbar-nav">
+                {{ $currentNode := . }}
+                {{ range .Site.Menus.main }}
+                  {{ if .HasChildren }}
+
+                <li class="nav-item sub-menu{{if $currentNode.HasMenuCurrent "main" . }} active{{end}}">
+                <a href="javascript:;" class="nav-link">
+                  {{ .Pre }}
+                  <span>{{ .Name }}</span>
+                  <span class="menu-arrow arrow_carrot-right"></span>
+                </a>
+                <ul class="sub">
+                  {{ range .Children }}
+                  <li{{if $currentNode.IsMenuCurrent "main" . }} class="active"{{end}}><a href="{{.URL}}"> {{ .Name }} </a> </li>
+                  {{ end }}
+                </ul>
+              {{ else }}
+                <li class="nav-item">
+                  <a href="{{.URL}}" class="nav-link{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}">
+                    {{ .Pre }}
+                    <span>{{ upper .Name }}</span>
+                  </a>
+                {{ end }}
+                </li>
+                {{ end }}
+              </ul>
+              <form class="form-inline pull-md-right hidden-md-down">
+                <input class="form-control" type="text" placeholder="Search">
+                <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

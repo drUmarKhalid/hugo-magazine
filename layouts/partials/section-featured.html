@@ -1,0 +1,25 @@
+<div class="main-featured">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-6 top-story">
+        {{ range first 1 (where .Site.Pages "Section" (lower .Title)) }}
+          {{ .Render "featured" }}
+        {{ end }}
+      </div>
+      <div class="col-xs-12 col-lg-6 old-top-story">
+        <div class="row">
+          <div class="col-xs-6">
+            {{ range first 2 (after 1 (where .Site.Pages "Section" (lower .Title))) }}
+              {{ .Render "featured" }}
+            {{ end }}
+          </div>
+          <div class="col-xs-6">
+            {{ range first 2 (after 3 (where .Site.Pages "Section" (lower .Title))) }}
+              {{ .Render "featured" }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
