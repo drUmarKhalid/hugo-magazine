@@ -3,16 +3,16 @@
 
 name = "Magazine"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
+licenselink = "https://github.com/sethmacleod/magazine/blob/master/LICENSE.md"
+description = "A magazine theme for Hugo"
+homepage = "https://github.com/sethmacleod/magazine"
+tags = ["magazine", "responsive"]
+features = ["magazine", "responsive"]
 min_version = 0.18
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Seth MacLeod"
+  homepage = "https://www.sethmacleod.com/"
 
 # If porting an existing theme
 [original]
