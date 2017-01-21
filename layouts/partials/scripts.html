@@ -11,10 +11,10 @@
     function scroll() {
         if ($(window).scrollTop() >= origOffsetY) {
             $('.menu').addClass('navbar-fixed-top');
-            $('nav').addClass('menu-background');
+            $('#collapseMobile').addClass('menu-background');
         } else {
             $('.menu').removeClass('navbar-fixed-top');
-            $('nav').removeClass('menu-background');
+            $('#collapseMobile').removeClass('menu-background');
         }
 
 

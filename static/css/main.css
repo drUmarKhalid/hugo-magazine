@@ -38,11 +38,11 @@ footer {
 }
 .main-nav .nav-item {
   border-left: 1px solid #f1f1f1;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .main-nav .nav-item:last-child {
   border-right: 1px solid #f1f1f1;
-  padding-right: 1rem;
 }
 .main-nav .form-control,
 .main-nav .btn {
@@ -51,14 +51,24 @@ footer {
 .main-nav .brand-logo {
   font-size: 1.5rem !important;
 }
+.main-nav nav {
+  padding: 0.5rem 0;
+}
 .navbar-fixed-top {
   background-color: #fff;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
 }
 .menu-background {
   max-width: 1140px;
   margin: auto;
-  padding: 0 1rem;
+  z-index: 9999;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .main-featured {
   background-color: #f8f8f8;
