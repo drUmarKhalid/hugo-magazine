@@ -2,7 +2,7 @@
   <figure class="figure">
     <a href="{{ .RelPermalink }}"><img src="{{ .Params.display }}" class="figure-img img-fluid"></a>
     <figcaption class="figure-caption">
-      <span><a class="tag tag-default" href="{{ .Site.BaseURL }}/{{ .Section }}/">{{ upper .Section }}</a></span>
+      <span><a class="badge badge-default" href="{{ .Site.BaseURL }}/{{ .Section }}/">{{ upper .Section }}</a></span>
       <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
       <span class="hidden-md-down">{{ if .Params.author }}
         By <a href="/authors/{{ .Params.author | urlize }}/">{{ .Params.author }}</a> -
