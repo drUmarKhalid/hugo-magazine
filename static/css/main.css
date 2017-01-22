@@ -16,7 +16,7 @@ footer {
   font-size: 0.75rem;
 }
 #topbar.bg-inverse .navbar-nav {
-  margin: -0.25rem 0;
+  padding: 0.25rem 0;
 }
 #topbar.bg-inverse li {
   margin-right: 1rem;
