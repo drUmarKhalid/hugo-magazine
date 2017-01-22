@@ -74,10 +74,10 @@ footer {
 .main-featured {
   background-color: #f8f8f8;
   border-bottom: 1px solid #eee;
-  padding: 2rem 0;
+  padding: 1rem 0 0.25rem;
 }
 .main-featured .figure {
-  margin: 0;
+  margin-bottom: 0;
   position: relative;
 }
 .main-featured .figure .figure-caption {
@@ -87,17 +87,25 @@ footer {
 .main-featured .top-story .figure-caption {
   padding: 1rem;
 }
-.main-featured .old-top-story .col-xs-6 h4 {
+.main-featured .old-top-story .col:first-child {
+  padding-right: 4px;
+  padding-left: 0;
+}
+.main-featured .old-top-story .col:last-child {
+  padding-right: 0;
+  padding-left: 4px;
+}
+.main-featured .old-top-story h4 {
   font-size: 1rem;
   margin-top: inherit;
 }
-.main-featured .old-top-story .col-xs-6:first-child {
+.main-featured .old-top-story:first-child {
   padding-right: 2px;
 }
-.main-featured .old-top-story .col-xs-6:last-child {
+.main-featured .old-top-story:last-child {
   padding-left: 2px;
 }
-.main-featured .old-top-story .col-xs-6 .figure-caption {
+.main-featured .old-top-story .figure-caption {
   padding: 1rem 0.5rem;
 }
 .main-magazine {

@@ -1,7 +1,7 @@
 <div class="main-featured">
   <div class="container">
     <div class="row">
-      <div class="col top-story">
+      <div class="col-xs-6 top-story">
         {{ range first 1 (where .Data.Pages "Params.summary" "!=" "hide") }}
           {{ .Render "featured" }}
         {{ end }}
