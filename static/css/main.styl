@@ -65,7 +65,7 @@ footer
 .main-featured
   background-color #f8f8f8
   border-bottom 1px solid #eee
-  padding 1rem 0 .25rem
+  padding .75rem 0 .25rem
   .figure
     margin-bottom 0
     position relative
@@ -93,7 +93,7 @@ footer
       padding 1rem .5rem
 
 .main-magazine
-  padding 2rem 0
+  padding .5rem 0
   .figure
     margin 0
     position relative
@@ -102,7 +102,14 @@ footer
       bottom 0
   .top-story .figure-caption
     padding 1rem
-  .old-top-story .col-xs-6
+  .old-top-story
+    .col
+      &:first-child
+        padding-right 4px
+        padding-left 0
+      &:last-child
+        padding-right 0
+        padding-left 4px
     h4
       font-size 1rem
       margin-top inherit
@@ -112,3 +119,6 @@ footer
       padding-left 2px
     .figure-caption
       padding 1rem .5rem
+  .reviews
+    padding-right 0
+    padding-left 0

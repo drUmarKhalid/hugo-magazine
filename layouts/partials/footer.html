@@ -1,10 +1,15 @@
-<footer class="footer navbar-full navbar-dark bg-inverse">
+<footer class="footer navbar-inverse bg-inverse">
   <div class="container">
     <nav>
       <ul class="nav navbar-nav">
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.footer }}
         <li class="nav-item">
-          <a href="#" class="nav-link">Content</a>
-        </li>
+          <a href="{{.URL}}" class="nav-link{{if or ($currentNode.IsMenuCurrent "footer" .) ($currentNode.HasMenuCurrent "footer" .) }} active{{end}}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        {{ end }}
       </ul>
     </nav>
   </div>
